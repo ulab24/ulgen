@@ -1,0 +1,8 @@
+# Only the installer, the key, docs and tests belong here. Binaries are published as GitHub Release assets,
+# never committed, and there is no source.
+*.tar.gz
+*.zip
+ulgen
+ulgen-*
+engines/
+dist/
