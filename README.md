@@ -27,6 +27,16 @@ curl -fsSL https://raw.githubusercontent.com/ulab24/ulgen/main/install.sh | bash
 curl -fsSL https://raw.githubusercontent.com/ulab24/ulgen/main/install.sh | bash -s -- --dir=$HOME/bin
 ```
 
+## Docker
+
+```sh
+docker pull ghcr.io/ulab24/ulgen:latest
+docker run --rm -i -v ulgen-data:/data ghcr.io/ulab24/ulgen:latest mcp
+docker run --rm --network host -v ulgen-data:/data ghcr.io/ulab24/ulgen:latest serve
+```
+
+CPU engines only. The API listens on loopback inside the container by design, so use `--network host` (Linux) to reach it.
+
 ## Verify by hand
 
 ```sh
